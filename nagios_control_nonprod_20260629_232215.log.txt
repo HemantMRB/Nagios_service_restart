@@ -1,0 +1,125 @@
+[ec2-user@ip-172-31-1-118 log]$ cat < nagios_control_nonprod_20260629_232215.log
+
+  ███████████████████████████████████████████████████████████
+  Nagios Service Control — NON-PRODUCTION
+  ███████████████████████████████████████████████████████████
+
+  Log file : /var/log/nagios_control_nonprod_20260629_232215.log
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PRE-FLIGHT CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  OS       : Red Hat Enterprise Linux 10.2 (Coughlan)
+  Hostname : ip-172-31-1-118.ap-south-1.compute.internal
+  Kernel   : 6.12.0-211.16.1.el10_2.x86_64
+  Time     : Mon Jun 29 23:22:15 UTC 2026
+
+  Service availability on this host:
+  [FOUND]   crond
+  [FOUND]   httpd
+  [FOUND]   mariadb
+  [FOUND]   npcd
+  [FOUND]   nagios
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SERVICE STATUS — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [ACTIVE]  crond
+  [ACTIVE]  httpd
+  [ACTIVE]  mariadb
+  [ACTIVE]  npcd
+  [ACTIVE]  nagios
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STOPPING ALL SERVICES — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Stop order: nagios → npcd → mariadb → httpd → crond
+
+  Stopping nagios...
+  [STOPPED] nagios
+  Stopping npcd...
+  [STOPPED] npcd
+  Stopping mariadb...
+  [STOPPED] mariadb
+  Stopping httpd...
+  [STOPPED] httpd
+  Stopping crond...
+  [STOPPED] crond
+
+  Post-stop verification:
+  [INACTIVE]  crond
+  [INACTIVE]  httpd
+  [INACTIVE]  mariadb
+  [INACTIVE]  npcd
+  [INACTIVE]  nagios
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SERVICE STATUS — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [INACTIVE]  crond
+  [INACTIVE]  httpd
+  [INACTIVE]  mariadb
+  [INACTIVE]  npcd
+  [INACTIVE]  nagios
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STARTING ALL SERVICES — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Start order: crond → httpd → mariadb → npcd → nagios
+
+  Starting crond...
+  [STARTED] crond
+  Starting httpd...
+  [STARTED] httpd
+  Starting mariadb...
+  [STARTED] mariadb
+  Starting npcd...
+  [STARTED] npcd
+  Starting nagios...
+  [STARTED] nagios
+
+  Post-start verification:
+  [ACTIVE]  crond
+  [ACTIVE]  httpd
+  [ACTIVE]  mariadb
+  [ACTIVE]  npcd
+  [ACTIVE]  nagios
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RESTARTING ALL SERVICES — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Phase 1 — Stopping in order: nagios → npcd → mariadb → httpd → crond
+
+  Stopping nagios...
+  [STOPPED] nagios
+  Stopping npcd...
+  [STOPPED] npcd
+  Stopping mariadb...
+  [STOPPED] mariadb
+  Stopping httpd...
+  [STOPPED] httpd
+  Stopping crond...
+  [STOPPED] crond
+
+  Waiting 2 seconds before starting...
+
+  Phase 2 — Starting in order: crond → httpd → mariadb → npcd → nagios
+
+  Starting crond...
+  [STARTED] crond
+  Starting httpd...
+  [STARTED] httpd
+  Starting mariadb...
+  [STARTED] mariadb
+  Starting npcd...
+  [STARTED] npcd
+  Starting nagios...
+  [STARTED] nagios
+
+  Final status after restart:
+  [ACTIVE]  crond
+  [ACTIVE]  httpd
+  [ACTIVE]  mariadb
+  [ACTIVE]  npcd
+  [ACTIVE]  nagios
+[ec2-user@ip-172-31-1-118 log]$

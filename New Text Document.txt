@@ -1,0 +1,229 @@
+[ec2-user@ip-172-31-1-118 ~]$  sudo bash nagios_restart_nonprod.sh
+
+  ███████████████████████████████████████████████████████████
+  Nagios Service Control — NON-PRODUCTION
+  ███████████████████████████████████████████████████████████
+
+  Log file : /var/log/nagios_control_nonprod_20260629_232215.log
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PRE-FLIGHT CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  OS       : Red Hat Enterprise Linux 10.2 (Coughlan)
+  Hostname : ip-172-31-1-118.ap-south-1.compute.internal
+  Kernel   : 6.12.0-211.16.1.el10_2.x86_64
+  Time     : Mon Jun 29 23:22:15 UTC 2026
+
+  Service availability on this host:
+  [FOUND]   crond
+  [FOUND]   httpd
+  [FOUND]   mariadb
+  [FOUND]   npcd
+  [FOUND]   nagios
+
+  ┌─────────────────────────────────────────────┐
+  │       NAGIOS SERVICE CONTROL MENU           │
+  │            NON-PRODUCTION                   │
+  ├─────────────────────────────────────────────┤
+  │  1.  Status   — show current service status │
+  │  2.  Stop     — stop all services           │
+  │  3.  Start    — start all services          │
+  │  4.  Restart  — stop then start all         │
+  │  5.  Exit                                   │
+  └─────────────────────────────────────────────┘
+
+  What would you like to do? [1-5]: 1
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SERVICE STATUS — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [ACTIVE]  crond
+  [ACTIVE]  httpd
+  [ACTIVE]  mariadb
+  [ACTIVE]  npcd
+  [ACTIVE]  nagios
+
+  ─────────────────────────────────────────────────
+  Press ENTER to return to menu...
+
+  ┌─────────────────────────────────────────────┐
+  │       NAGIOS SERVICE CONTROL MENU           │
+  │            NON-PRODUCTION                   │
+  ├─────────────────────────────────────────────┤
+  │  1.  Status   — show current service status │
+  │  2.  Stop     — stop all services           │
+  │  3.  Start    — start all services          │
+  │  4.  Restart  — stop then start all         │
+  │  5.  Exit                                   │
+  └─────────────────────────────────────────────┘
+
+  What would you like to do? [1-5]: 2
+
+  Are you sure you want to STOP all services? [y/N]: y
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STOPPING ALL SERVICES — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Stop order: nagios → npcd → mariadb → httpd → crond
+
+  Stopping nagios...
+  [STOPPED] nagios
+  Stopping npcd...
+  [STOPPED] npcd
+  Stopping mariadb...
+  [STOPPED] mariadb
+  Stopping httpd...
+  [STOPPED] httpd
+  Stopping crond...
+  [STOPPED] crond
+
+  Post-stop verification:
+  [INACTIVE]  crond
+  [INACTIVE]  httpd
+  [INACTIVE]  mariadb
+  [INACTIVE]  npcd
+  [INACTIVE]  nagios
+
+  ─────────────────────────────────────────────────
+  Press ENTER to return to menu...
+
+  ┌─────────────────────────────────────────────┐
+  │       NAGIOS SERVICE CONTROL MENU           │
+  │            NON-PRODUCTION                   │
+  ├─────────────────────────────────────────────┤
+  │  1.  Status   — show current service status │
+  │  2.  Stop     — stop all services           │
+  │  3.  Start    — start all services          │
+  │  4.  Restart  — stop then start all         │
+  │  5.  Exit                                   │
+  └─────────────────────────────────────────────┘
+
+  What would you like to do? [1-5]: 1
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SERVICE STATUS — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [INACTIVE]  crond
+  [INACTIVE]  httpd
+  [INACTIVE]  mariadb
+  [INACTIVE]  npcd
+  [INACTIVE]  nagios
+
+  ─────────────────────────────────────────────────
+  Press ENTER to return to menu...
+
+  ┌─────────────────────────────────────────────┐
+  │       NAGIOS SERVICE CONTROL MENU           │
+  │            NON-PRODUCTION                   │
+  ├─────────────────────────────────────────────┤
+  │  1.  Status   — show current service status │
+  │  2.  Stop     — stop all services           │
+  │  3.  Start    — start all services          │
+  │  4.  Restart  — stop then start all         │
+  │  5.  Exit                                   │
+  └─────────────────────────────────────────────┘
+
+  What would you like to do? [1-5]: 3
+
+  Are you sure you want to START all services? [y/N]: y
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STARTING ALL SERVICES — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Start order: crond → httpd → mariadb → npcd → nagios
+
+  Starting crond...
+  [STARTED] crond
+  Starting httpd...
+  [STARTED] httpd
+  Starting mariadb...
+  [STARTED] mariadb
+  Starting npcd...
+  [STARTED] npcd
+  Starting nagios...
+  [STARTED] nagios
+
+  Post-start verification:
+  [ACTIVE]  crond
+  [ACTIVE]  httpd
+  [ACTIVE]  mariadb
+  [ACTIVE]  npcd
+  [ACTIVE]  nagios
+
+  ─────────────────────────────────────────────────
+  Press ENTER to return to menu...
+
+  ┌─────────────────────────────────────────────┐
+  │       NAGIOS SERVICE CONTROL MENU           │
+  │            NON-PRODUCTION                   │
+  ├─────────────────────────────────────────────┤
+  │  1.  Status   — show current service status │
+  │  2.  Stop     — stop all services           │
+  │  3.  Start    — start all services          │
+  │  4.  Restart  — stop then start all         │
+  │  5.  Exit                                   │
+  └─────────────────────────────────────────────┘
+
+  What would you like to do? [1-5]: 4
+
+  Are you sure you want to RESTART all services? [y/N]: y
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RESTARTING ALL SERVICES — NON-PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Phase 1 — Stopping in order: nagios → npcd → mariadb → httpd → crond
+
+  Stopping nagios...
+  [STOPPED] nagios
+  Stopping npcd...
+  [STOPPED] npcd
+  Stopping mariadb...
+  [STOPPED] mariadb
+  Stopping httpd...
+  [STOPPED] httpd
+  Stopping crond...
+  [STOPPED] crond
+
+  Waiting 2 seconds before starting...
+
+  Phase 2 — Starting in order: crond → httpd → mariadb → npcd → nagios
+
+  Starting crond...
+  [STARTED] crond
+  Starting httpd...
+  [STARTED] httpd
+  Starting mariadb...
+  [STARTED] mariadb
+  Starting npcd...
+  [STARTED] npcd
+  Starting nagios...
+  [STARTED] nagios
+
+  Final status after restart:
+  [ACTIVE]  crond
+  [ACTIVE]  httpd
+  [ACTIVE]  mariadb
+  [ACTIVE]  npcd
+  [ACTIVE]  nagios
+
+  ─────────────────────────────────────────────────
+  Press ENTER to return to menu...
+
+  ┌─────────────────────────────────────────────┐
+  │       NAGIOS SERVICE CONTROL MENU           │
+  │            NON-PRODUCTION                   │
+  ├─────────────────────────────────────────────┤
+  │  1.  Status   — show current service status │
+  │  2.  Stop     — stop all services           │
+  │  3.  Start    — start all services          │
+  │  4.  Restart  — stop then start all         │
+  │  5.  Exit                                   │
+  └─────────────────────────────────────────────┘
+
+  What would you like to do? [1-5]: 5
+
+  Exiting. Full log saved: /var/log/nagios_control_nonprod_20260629_232215.log
+
+[ec2-user@ip-172-31-1-118 ~]$
