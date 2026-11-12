@@ -1,4 +1,4 @@
-[ec2-user@ip-172-31-1-118 ~]$  sudo bash nagios_restart_nonprod.sh
+[********~]$  sudo bash nagios_restart_nonprod.sh
 
   ███████████████████████████████████████████████████████████
   Nagios Service Control — NON-PRODUCTION
@@ -10,9 +10,9 @@
   PRE-FLIGHT CHECK
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   OS       : Red Hat Enterprise Linux 10.2 (Coughlan)
-  Hostname : ip-172-31-1-118.ap-south-1.compute.internal
+  Hostname : ********.compute.internal
   Kernel   : 6.12.0-211.16.1.el10_2.x86_64
-  Time     : Mon Jun 29 23:22:15 UTC 2026
+  Time     : ********
 
   Service availability on this host:
   [FOUND]   crond
